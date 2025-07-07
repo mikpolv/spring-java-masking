@@ -1,4 +1,6 @@
-package ru.astondev.masking.annotation;
+package ru.astondev.masking.maskingv2.annotation;
+
+import ru.astondev.masking.common.MaskingType;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

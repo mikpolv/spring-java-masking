@@ -1,11 +1,11 @@
 package ru.astondev.masking.dto;
 
-import ru.astondev.masking.annotation.Sensitive;
+import ru.astondev.masking.maskingv2.annotation.Sensitive;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
 
-import static ru.astondev.masking.annotation.MaskingType.DATE;
+import static ru.astondev.masking.common.MaskingType.DATE;
 
 public record VerySensitiveDto(
     Long id,
@@ -13,8 +13,7 @@ public record VerySensitiveDto(
     @Sensitive(DATE)
     LocalDate sensitiveDate,
     @Sensitive
-    String sensitiveInfo,
-    BigDecimal amount
+    String sensitiveInfo
 ) {
 
 //    @Override

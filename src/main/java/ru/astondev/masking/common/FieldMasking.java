@@ -1,6 +1,4 @@
-package ru.astondev.masking.utils;
-
-import ru.astondev.masking.annotation.MaskingType;
+package ru.astondev.masking.common;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
@@ -12,9 +10,8 @@ public class FieldMasking {
             case TEXT -> maskString(obj.toString());
             case DATE -> maskDate(obj.toString());
             case ACCOUNT_NUMBER -> maskAccount(obj.toString());
-            // Check if BigDecimal
             case BIG_DECIMAL -> maskBigDecimal((BigDecimal) obj);
-            case null -> maskString(null); // maybe make a decision depending on class?
+            case null -> maskString(null); // maybe make a decision depending on the class?
         };
     }
 

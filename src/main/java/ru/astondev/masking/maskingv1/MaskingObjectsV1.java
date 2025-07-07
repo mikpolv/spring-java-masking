@@ -1,4 +1,4 @@
-package ru.astondev.masking.utils;
+package ru.astondev.masking.maskingv1;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.core.type.TypeReference;
@@ -14,7 +14,7 @@ import java.util.Objects;
 import java.util.Optional;
 import java.util.Set;
 
-import static ru.astondev.masking.utils.FieldMasking.maskString;
+import static ru.astondev.masking.common.FieldMasking.maskString;
 
 @Slf4j
 @RequiredArgsConstructor
@@ -28,13 +28,6 @@ public class MaskingObjectsV1 {
 
     public static String getMaskingForObject(Object content, Set<String> needMaskingKeys) {
         return processJsonString(customObjectMapper.writeValueAsString(content), needMaskingKeys);
-    }
-
-    public static String getMaskingForJsonString(String content, Set<String> needMaskingKeys) {
-        if (Objects.isNull(content)) {
-            return "null";
-        }
-        return Objects.isNull(needMaskingKeys) ? content : processJsonString(content, needMaskingKeys);
     }
 
     private static String processJsonString(String content, Set<String> needMaskingKeys) {

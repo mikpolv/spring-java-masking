@@ -2,7 +2,7 @@ package ru.astondev.masking.maskingv3;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
-import ru.astondev.masking.annotation.MaskingType;
+import ru.astondev.masking.common.MaskingType;
 
 import java.util.Arrays;
 import java.util.Map;
@@ -13,7 +13,6 @@ import java.util.stream.Collectors;
 public enum Field4Mask {
     _1("sensitiveDate", MaskingType.DATE),
     _2("sensitiveInfo", MaskingType.TEXT),
-    _3("amount", MaskingType.TEXT),
     ;
 
     private final String fieldName;

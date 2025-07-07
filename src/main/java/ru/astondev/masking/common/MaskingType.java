@@ -1,4 +1,4 @@
-package ru.astondev.masking.annotation;
+package ru.astondev.masking.common;
 
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
