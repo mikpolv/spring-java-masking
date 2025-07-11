@@ -15,7 +15,6 @@ import java.io.IOException;
 import java.time.LocalDate;
 import java.util.List;
 
-
 // есть еще ContextualSerializer
 public class SensitiveSerializerModifier extends BeanSerializerModifier {
 
