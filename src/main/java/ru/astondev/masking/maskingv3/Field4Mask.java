@@ -11,8 +11,9 @@ import java.util.stream.Collectors;
 @Getter
 @AllArgsConstructor
 public enum Field4Mask {
-    _1("sensitiveDate", MaskingType.DATE),
+    _1("signDate", MaskingType.DATE),
     _2("sensitiveInfo", MaskingType.TEXT),
+    _3("accountNumber", MaskingType.ACCOUNT_NUMBER),
     ;
 
     private final String fieldName;

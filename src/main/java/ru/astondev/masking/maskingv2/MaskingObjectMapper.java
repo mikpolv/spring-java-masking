@@ -18,7 +18,7 @@ import static com.fasterxml.jackson.annotation.JsonInclude.Include.NON_NULL;
 @Slf4j
 @Component
 public class MaskingObjectMapper {
-    public static final ObjectMapper OBJECT_SENSITIVE_MAPPER = initSencitiveObjectMapper();
+    public static final ObjectMapper SENSITIVE_OBJECT_MAPPER = initSencitiveObjectMapper();
 
     private static ObjectMapper initSencitiveObjectMapper() {
         return new ObjectMapper()
@@ -32,6 +32,6 @@ public class MaskingObjectMapper {
             .registerModule(new JavaTimeModule())
             .registerModule(new MaskingModule()); // Our masking
 
-    }
 
+    }
 }

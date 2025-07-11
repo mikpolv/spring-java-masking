@@ -6,7 +6,7 @@ Configuration:
       name: Console
       target: SYSTEM_OUT
       PatternLayout:
-        pattern: "%d{HH:mm:ss.SSS} %clr{%5p} %clr{%-40.40c{1.}}{cyan} %clr{:}{faint} %hm%n%wEx"
+        pattern: "%d{HH:mm:ss.SSS} %clr{%5p} %clr{%-40.40c{1.}}{cyan} %clr{:}{faint} %m%n%wEx"
 
   Loggers:
     Root:

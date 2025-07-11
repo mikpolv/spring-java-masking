@@ -4,14 +4,14 @@ import java.math.BigDecimal;
 import java.time.LocalDate;
 
 public class FieldMasking {
-    // TODO get Masking by class??
+
     public static String mask(Object obj, MaskingType maskingType) {
         return switch (maskingType) {
             case TEXT -> maskString(obj.toString());
             case DATE -> maskDate(obj.toString());
             case ACCOUNT_NUMBER -> maskAccount(obj.toString());
             case BIG_DECIMAL -> maskBigDecimal((BigDecimal) obj);
-            case null -> maskString(null); // maybe make a decision depending on the class?
+            case null -> maskString(null);
         };
     }
 

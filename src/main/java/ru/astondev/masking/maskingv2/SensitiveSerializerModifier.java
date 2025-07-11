@@ -53,7 +53,7 @@ public class SensitiveSerializerModifier extends BeanSerializerModifier {
 
             String result = switch (value) {
                 case String s -> FieldMasking.mask(s, maskingType);
-                case LocalDate s -> FieldMasking.maskLocalDate(s, maskingType);
+                case LocalDate s -> FieldMasking.maskDate(s.toString());
                 // Add other type handlers
                 default -> value.toString();
             };

@@ -36,14 +36,14 @@ public class MaskingObjectsV1 {
             if (rootJsonNode.isObject()) {
                 TypeReference<Map<String, Object>> typeReference = new TypeReference<>() {
                 };
-                return Optional.ofNullable(customObjectMapper.readValue(content, typeReference))
+                return Optional.ofNullable(customObjectMapper.read(content, typeReference))
                     .map(jsonObject -> maskingJsonObject(jsonObject, needMaskingKeys))
                     .map(customObjectMapper::writeValueAsString)
                     .orElse(content);
             } else if (rootJsonNode.isArray()) {
                 TypeReference<List<Object>> typeReference = new TypeReference<>() {
                 };
-                return Optional.ofNullable(customObjectMapper.readValue(content, typeReference))
+                return Optional.ofNullable(customObjectMapper.read(content, typeReference))
                     .map(jsonArray -> maskingJsonArray(jsonArray, null, needMaskingKeys))
                     .map(customObjectMapper::writeValueAsString)
                     .orElse(content);

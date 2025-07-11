@@ -26,7 +26,7 @@ repositories {
 dependencies {
     implementation("org.springframework.boot:spring-boot-starter-web")
 
-    // выпить и включить logBAck n log4j2
+    // включить log4j
     {
         exclude(group = "org.springframework.boot", module = "spring-boot-starter-logging")
     }
@@ -46,7 +46,7 @@ dependencies {
     testImplementation("org.springframework.boot:spring-boot-starter-test")
 
     // Annotation processor for Log4j plugin processing
-    annotationProcessor("org.apache.logging.log4j:log4j-core:2.23.1")
+    annotationProcessor("org.apache.logging.log4j:log4j-core")
 }
 
 tasks.withType<Test> {
